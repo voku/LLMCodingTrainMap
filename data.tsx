@@ -186,11 +186,10 @@ export const lines: TransitLine[] = [
           <strong>When to use:</strong> Modern stacks where iteration is cheap and instant.
         </div>
 
-        <SectionHeader icon={Brain}>1. Go to AI Studio</SectionHeader>
+        <SectionHeader icon={Brain}>1. Use Your LLM Tool</SectionHeader>
         <p className="text-slate-700">
-          Use your planning from before, and copy & paste the <strong>full document</strong> into the input.
+          Use your planning from before, and copy & paste the <strong>full document</strong> into your preferred LLM interface (ChatGPT, Claude, etc.).
         </p>
-        <LinkCard url="https://aistudio.google.com/" title="Google AI Studio" />
 
         <SectionHeader icon={Split}>2. Ping-Pong Time</SectionHeader>
         <p className="text-slate-700">
@@ -208,13 +207,12 @@ export const lines: TransitLine[] = [
           Use another LLM (e.g., Codex or GitHub agent) to handle the cleanup. Give it a batch list:
         </p>
         <CodeBlock>
-{`Remove GEMINI references
-Update README.md to remove AI Studio ads
-Add "Key Files Detector" helper to README
+{`Update documentation
+Add helper prompts to README
 Add a favicon
 Create a contribution link
-Configure GitHub Pages deployment
-Add GitHub Actions workflow
+Configure deployment
+Add CI/CD workflow
 Build and verify the application works`}
         </CodeBlock>
 
@@ -512,7 +510,7 @@ export const stations: Station[] = [
     content: (
       <>
         <SectionHeader>Full Context Input</SectionHeader>
-        <p className="text-slate-600">Paste one coherent spec document into AI Studio. Big context, single direction. Don't feed fragments.</p>
+        <p className="text-slate-600">Paste one coherent spec document into your LLM tool. Big context, single direction. Don't feed fragments.</p>
       </>
     )
   },

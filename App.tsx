@@ -3,7 +3,7 @@ import TransitMap from './components/TransitMap';
 import ContentDrawer from './components/ContentDrawer';
 import { stations, lines } from './data';
 import { Station, TransitLine } from './types';
-import { Map } from 'lucide-react';
+import { Map, Github } from 'lucide-react';
 
 export default function App() {
   const [selectedStationId, setSelectedStationId] = useState<string | null>(null);
@@ -58,6 +58,18 @@ export default function App() {
 
   return (
     <div className="flex h-screen w-screen bg-white overflow-hidden relative font-sans">
+      {/* GitHub Contribution Link */}
+      <a 
+        href="https://github.com/voku/LLMCodingTrainMap" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="absolute top-4 right-4 z-20 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 transition-all active:scale-95 text-sm font-medium"
+        title="Contribute on GitHub"
+      >
+        <Github size={18} />
+        <span className="hidden sm:inline">Contribute</span>
+      </a>
+
       {/* Main Map Area */}
       <div className="flex-1 relative z-0">
         <TransitMap 
